@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Blog.Domain.Entities
 {
-    public class UserEntity : BaseEntity<int>
+    public class UserEntity : BaseEntity
     {
         public string Description { get; set; } = String.Empty;
         public string Name { get; set; } = String.Empty;

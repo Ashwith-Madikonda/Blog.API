@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace Blog.Domain.Entities
 {
-    public abstract class BaseEntity<T>
+    public class BaseEntity : IBase
     {
-        public virtual int Id { get; set; }
+        public  Guid Id { get; set; }
+    }
+
+    public interface IBase
+    {
+        public Guid Id { get; set; }
     }
 }

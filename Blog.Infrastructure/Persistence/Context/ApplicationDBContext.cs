@@ -1,4 +1,4 @@
-﻿using Blog.Application.Common.Interfaces;
+﻿using Blog.Application.Interfaces.Repositories;
 using Blog.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Blog.Infrastructure.Persistence
+namespace Blog.Infrastructure.Persistence.Context
 {
-    public class ApplicationDBContext: DbContext, IApplicationDBContext
+    public class ApplicationDBContext : DbContext, IApplicationDBContext
     {
         #region Ctor
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options)
@@ -31,6 +31,19 @@ namespace Blog.Infrastructure.Persistence
         public Task<int> SaveChangesAsync()
         {
             return base.SaveChangesAsync();
+        }
+
+        public override int SaveChanges()
+        {
+            return base.SaveChanges();
+        }
+        public override int SaveChanges(bool acceptAllChangesOnSuccess)
+        {
+            return base.SaveChanges(acceptAllChangesOnSuccess);
+        }
+        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+            return await base.SaveChangesAsync(cancellationToken);
         }
         #endregion
 

@@ -1,3 +1,6 @@
+using Blog.Application;
+using Blog.Application.Interfaces.IServices;
+using Blog.Application.Services;
 using Blog.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //Dependency Injection
 builder.Services.AddPersistence(builder.Configuration);
+builder.Services.AddApplication();
 
 var app = builder.Build();
 

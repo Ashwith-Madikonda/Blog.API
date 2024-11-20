@@ -1,5 +1,5 @@
-﻿using Blog.Application.Common.Interfaces;
-using Blog.Infrastructure.Persistence;
+﻿using Blog.Application.Interfaces.Repositories;
+using Blog.Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

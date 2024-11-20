@@ -11,3 +11,5 @@
 /Blog.Application/bin/Debug/net8.0
 /Blog.Domain/bin/Debug/net8.0
 /Blog.Infrastructure/bin/Debug/net8.0
+/Blog.Tests/bin/Debug/net8.0
+/Blog.Tests/obj
