@@ -7,3 +7,7 @@
 /Blog.Application/obj
 /Blog.Domain/obj
 /Blog.Infrastructure/obj
+/Blog.API/bin/Debug/net8.0
+/Blog.Application/bin/Debug/net8.0
+/Blog.Domain/bin/Debug/net8.0
+/Blog.Infrastructure/bin/Debug/net8.0
